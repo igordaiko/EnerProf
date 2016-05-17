@@ -1,0 +1,27 @@
+﻿@model IEnumerable<EnerProf.Models.Industries>
+
+<section class="pic_menu_desition">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="head_section">
+                <span id="logo_desition"></span>
+                <h2>Отраслевые решения</h2>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+    @foreach (var item in Model)
+    {
+        <div class="col-md-3">
+            <div class="item_des_mnu">
+                <a href="#" class="link_mnu_item">
+                    <div class="item_desition">
+                        <span style="background:url(@item.Img)"></span>
+                        <h4>@item.Name</h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+    }
+</section>

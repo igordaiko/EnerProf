@@ -1,0 +1,468 @@
+﻿@using EnerProf.Models;
+@{
+    Layout = "~/Views/Home/_HomeLayout.cshtml";
+    List<Category> list_of_categories = ViewBag.ListOfCategories;
+}
+
+<!DOCTYPE html>
+
+    <!--==============================================================================================-->
+    <nav class="main_menu">
+        <div class="container">
+            <div class="row menu" align="center">
+                <ul class="menu_wrap">
+                    <li class="menu_item">
+                        <a href="#">
+                            <div class="mnu_icon">
+                                <h4>Оборудование</h4>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="menu_item">
+                        <a href="#">
+                            <div class="mnu_icon">
+                                <h4>Отраслевые решения</h4>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="menu_item">
+                        <a href="#">
+                            <div class="mnu_icon">
+                                <h4>Сервис</h4>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="menu_item">
+                        <a href="#">
+                            <div class="mnu_icon">
+                                <h4>Наши клиенты</h4>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="menu_item">
+                        <a href="#">
+                            <div class="mnu_icon">
+                                <h4>О компании</h4>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="menu_item">
+                        <a href="#">
+                            <div class="mnu_icon">
+                                <h4>Контакты</h4>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--==============================================================================================-->
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active" align="center">
+                <div class="wrapper">
+                    <img src="img/first-slide.png" width="320" height="450">
+                    <div class="flo_img">
+                        <div class="description">
+                            <h3>Гидравлический инструмент</h3>
+                            <p id="desc-text">
+                                Гидравлический инструмент производства Enerpac
+                                представлен широким спектром приспособлений
+                                различного предназначения и применения.
+                            </p>
+                        </div>
+                        <div class="company_logo">
+                            <div class="row">
+
+                                <div class="col-md-2">
+                                    <img src="img/enerpac.png" width="90" height="90">
+                                </div>
+                                <div class="col-md-2">
+                                    <h6 id="comp-from">США</h6>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8">
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="go">
+                                        <a href="#" class="button go">
+                                            <div>
+                                                <h5>Узнать больше</h5>
+                                                <span></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item" align="center">
+                <div class="wrapper">
+                    <img src="img/first-slide.png" width="320" height="450">
+                    <div class="flo_img">
+                        <div class="description">
+                            <h3>Гидравлический инструмент</h3>
+                            <p id="desc-text">
+                                Гидравлический инструмент производства Enerpac
+                                представлен широким спектром приспособлений
+                                различного предназначения и применения.
+                            </p>
+                        </div>
+                        <div class="company_logo">
+                            <div class="row">
+
+                                <div class="col-md-2">
+                                    <img src="img/enerpac.png" width="90" height="90">
+                                </div>
+                                <div class="col-md-2">
+                                    <h6 id="comp-from">США</h6>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8">
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="go">
+                                        <a href="#" class="button go">
+                                            <div>
+                                                <h5>Узнать больше</h5>
+                                                <span></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item" align="center">
+                <div class="wrapper">
+                    <img src="img/first-slide.png" width="320" height="450">
+                    <div class="flo_img">
+                        <div class="description">
+                            <h3>Гидравлический инструмент</h3>
+                            <p id="desc-text">
+                                Гидравлический инструмент производства Enerpac
+                                представлен широким спектром приспособлений
+                                различного предназначения и применения.
+                            </p>
+                        </div>
+                        <div class="company_logo">
+                            <div class="row">
+
+                                <div class="col-md-2">
+                                    <img src="img/enerpac.png" width="90" height="90">
+                                </div>
+                                <div class="col-md-2">
+                                    <h6 id="comp-from">США</h6>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8">
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="go">
+                                        <a href="#" class="button go">
+                                            <div>
+                                                <h5>Узнать больше</h5>
+                                                <span></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item" align="center">
+                <div class="wrapper">
+                    <img src="img/first-slide.png" width="320" height="450">
+                    <div class="flo_img">
+                        <div class="description">
+                            <h3>Гидравлический инструмент</h3>
+                            <p id="desc-text">
+                                Гидравлический инструмент производства Enerpac
+                                представлен широким спектром приспособлений
+                                различного предназначения и применения.
+                            </p>
+                        </div>
+                        <div class="company_logo">
+                            <div class="row">
+
+                                <div class="col-md-2">
+                                    <img src="img/enerpac.png" width="90" height="90">
+                                </div>
+                                <div class="col-md-2">
+                                    <h6 id="comp-from">США</h6>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8">
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="go">
+                                        <a href="#" class="button go">
+                                            <div>
+                                                <h5>Узнать больше</h5>
+                                                <span></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item" align="center">
+                <div class="wrapper">
+                    <img src="img/first-slide.png" width="320" height="450">
+                    <div class="flo_img">
+                        <div class="description">
+                            <h3>Гидравлический инструмент</h3>
+                            <p id="desc-text">
+                                Гидравлический инструмент производства Enerpac
+                                представлен широким спектром приспособлений
+                                различного предназначения и применения.
+                            </p>
+                        </div>
+                        <div class="company_logo">
+                            <div class="row">
+
+                                <div class="col-md-2">
+                                    <img src="img/enerpac.png" width="90" height="90">
+                                </div>
+                                <div class="col-md-2">
+                                    <h6 id="comp-from">США</h6>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8">
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="go">
+                                        <a href="#" class="button go">
+                                            <div>
+                                                <h5>Узнать больше</h5>
+                                                <span></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="li_ind active"></li>
+                <li data-target="#myCarousel" data-slide-to="1" class="li_ind"></li>
+                <li data-target="#myCarousel" data-slide-to="2" class="li_ind"></li>
+                <li data-target="#myCarousel" data-slide-to="3" class="li_ind"></li>
+                <li data-target="#myCarousel" data-slide-to="4" class="li_ind"></li>
+            </ol>
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+</div>
+        <!--==============================================================================================-->
+        <section class="pic_menu">
+            <div class="cont">
+                <div class="row">
+
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <div class="head_section">
+                            <span id="logo"></span>
+                            <h2>Оборудование от компании <span id="ener">Enerprof</span></h2>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="row">
+                    <!--Ромка, что это за говнокод?) почему у тебя выравнивание по центру идет за счет двух дполнительных дивов по краям?
+                        Не хорошо так делать. Думал я не замечу, а хуй тебе!)
+                    -->
+                    <div class="col-md-2"></div>
+
+                    @foreach (var category in list_of_categories)
+                    {
+
+                        <div class="col-md-2">
+                            <a class="active-item" href="#">
+                                <div class="pic_item">
+                                    <span style="background:@category.Img"></span>
+                                    <h4>@category.Name</h4>
+                                    <p>
+                                        Аксессуары для
+                                        поднятия и
+                                        крепления грузов
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    }
+                    <div class="col-md-2"></div>
+            </div>
+
+        </section>
+        <!--==============================================================================================-->
+        <section class="pic_menu_desition">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div class="head_section">
+                        <span id="logo_desition"></span>
+                        <h2>Отраслевые решения</h2>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            @foreach (var item in ViewBag.ListOfIndustries)
+            {
+                <div class="col-md-3">
+                    <div class="item_des_mnu">
+                        <a href="#" class="link_mnu_item">
+                            <div class="item_desition">
+                                <span style="background:url(@item.Img)"></span>
+                                <h4>@item.Name</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            }
+        </section>
+        <!--==============================================================================================-->
+        <section class="info">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div class="head_section orange">
+                        <span></span>
+                        <h2>У нас есть решение для любых задач</h2>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div class="info_p">
+                        <p>
+                            Нашими клиентами являются ведущие машиностроительные, металлообрабатывающие, строительные,
+                            нефтеперерабатывающие,  металлургические, судостроительные предприятия Украины и компании связи,
+                            а также много других фирм, из разных отраслей украинской промышленности. Руководители этих компаний
+                            понимают, что меняться нужно намного раньше, чем конкуренты заставят их это сделать. Они всегда делают
+                            выбор между лучшим и дешевым в пользу лучшего. И остаются на голову выше конкурентов.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-4">
+                    <div class="line">
+                        <h4 class="orange_h">
+                            Почему «Складпак» – лидер на национальном
+                            рынке упаковочного оборудования и материалов?
+                        </h4>
+                        <p>
+                            Наше лидерство далось нам не за широчайший
+                            ассортимент в отрасли, а за то, как мы помогаем нашим
+                            клиентам решать их бизнес-задачи – грамотно,
+                            взвешенно, прагматично.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div>
+                        <p>
+                            Основными направлениями деятельности
+                            ООО «Энерпроф» является поставка, монтаж и
+                            сервисное обслуживание грузоподъемного и
+                            гидравлического оборудования во всех отраслях
+                            промышленности
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <hr align="center" width="66%" size="2" color="#ff0000" />
+
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-3">
+                    <p>
+                        Когда мы проектируем решение для вас,
+                        то используем запатентованные технологии
+                        и оперируем опытом специалистов компании
+                        «Складпак» и наших европейских коллег. Мы привлечем к разработке вашего проекта
+                        наши европейские компании-партнеры.
+                    </p>
+                </div>
+                <div class="col-md-5">
+                    <h5 class="orange_h">«Энерпроф» - официальный представитель в Украине:</h5>
+                    <img src="img/company-set.png" width="100%" height="100%">
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <hr align="center" width="66%" size="2" color="#ff0000" />
+        </section>
+
+        <!--==============================================================================================-->
+
+
+        <!--Ромка. Карусель - халтура. Что бы она работала нужно постоянно изменять рисунок тот, что у тебя крутиться. Хрень) Сделай карусель из li-->
+        <section class="carousel_of_clients">
+
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div class="slider_section">
+                        <h2>Мы гордимся нашими клиентами</h2>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-lg-10">
+                        <div id="slider">
+                            <a href="#">
+                                <ul class="slides">
+                                    @foreach (var item in ViewBag.Clients)
+                                    {
+                                        <li class="slide" style="background:url(@item.Img)"></li>
+                                    }
+                                </ul>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+            </div>
+        </section>
+        <!--==============================================================================================-->

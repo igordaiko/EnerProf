@@ -1,0 +1,133 @@
+﻿<html>
+<head>
+
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/font.css">
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+    <!--==============================================================================================-->
+    <header>
+        <div class="container">
+            <div class="row head">
+                <div class="col-md-2">
+                    <a href="#"><span class="logo"></span></a>
+                </div>
+                <div class="head_bar">
+                    <div class="col-md-2">
+                        <input type="text" class="search">
+                    </div>
+                    <div class="col-md-2">
+                        <a href="#" class="button"><h5>ПОИСК</h5></a>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle button callback" type="button" data-toggle="dropdown">
+                                <span class="call_icon"></span>
+                                <span class="pr_number">044</span>
+                                <span class="af_number">235 45 45</span>
+                                <span class="arrow"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">
+                                        <div>
+                                            <span class="pr_number">044</span>
+                                            <span class="af_number">235 45 45</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div>
+                                            <span class="pr_number">044</span>
+                                            <span class="af_number">235 45 45</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#" class="button callback"><h5>Обратный звонок</h5></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+@RenderBody()
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="infologo" align="center">
+                        <a href="#"><span class="logo_foot"></span></a>
+                        <h4>
+                            «Энерпроф» - качество
+                            в любом деле, которое
+                            мы делаем!
+                        </h4>
+                        <h6>© 2013 Компания “Энерпроф”</h6>
+                    </div>
+                </div>
+
+                <div class="col-md-1"></div>
+                <div class="col-md-2">
+                    <div class="about_company">
+                        <h3>Компания</h3>
+
+                        <a href="#" class="button_foot small"><h5>Рекомендации</h5></a>
+                        <a href="#" class="button_foot small"><h5>Партнеры</h5></a>
+                        <a href="#" class="button_foot small"><h5>Статьи</h5></a>
+                        <a href="#" class="button_foot small"><h5>Контакты</h5></a>
+
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="support">
+                        <h3>Поддержка</h3>
+
+                        <a href="#" class="button_foot big"><h5>Помощь</h5></a>
+                        <a href="#" class="button_foot big"><h5>Гарантия</h5></a>
+                        <a href="#" class="button_foot big"><h5>Сотрудничество с нами</h5></a>
+                        <a href="#" class="button_foot big"><h5>Сервисное обслуживание</h5></a>
+                        <a href="#" class="button_foot big"><h5>Доставка</h5></a>
+
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="contact">
+                        <h3>Контакты</h3>
+                        <h4>Адрес</h4>
+                        <p>
+                            Украина, 03038, г.Киев<br>
+                            ул. Политехническая, 5<br>
+                            Бизнес-центр “Белка”
+                        </p>
+                        <span class="foot_numb">044 500 91 63</span>
+                        <span class="foot_numb">056 409 79 97</span>
+                        <span class="foot_numb">067 694 12 12</span>
+
+                        <h4>График работы</h4>
+                        <p>Пн-Пт: с<span class="hours"> 9:00</span> до <span class="hours"> 18:00</span></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="/js/jquery-2.2.1.min.js"></script>
+    <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/js.js"></script>
+    <script src="http://code.jquery.com/jquery-1.7.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>
+    <script src="~/js/jquery.unobtrusive-ajax.js"></script>
+
+</body>
+</html>
