@@ -13,7 +13,6 @@ C:\Users\Daiko\Desktop\EP\EnerProf\EnerProf\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\Daiko\Desktop\EP\EnerProf\EnerProf\bin\EnerProf.dll.config
 C:\Users\Daiko\Desktop\EP\EnerProf\EnerProf\bin\EnerProf.dll
 C:\Users\Daiko\Desktop\EP\EnerProf\EnerProf\bin\EnerProf.pdb
-C:\Users\Daiko\Desktop\EP\EnerProf\EnerProf\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Daiko\Desktop\EP\EnerProf\EnerProf\obj\Debug\EnerProf.csprojResolveAssemblyReference.cache
 C:\Users\Daiko\Desktop\EP\EnerProf\EnerProf\obj\Debug\EnerProf.dll
 C:\Users\Daiko\Desktop\EP\EnerProf\EnerProf\obj\Debug\EnerProf.pdb

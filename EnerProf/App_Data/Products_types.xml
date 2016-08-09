@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<products>
+  <product id="2313215">
+    <property name="Prop1" value="value1" id="2050688006" />
+    <property name="prop2" value="" id="-1089090153" />
+    <type id="-213154600" name="Тип1">
+      <property id="2050688006" name="Prop1" value="value1" />
+      <property id="-1089090153" name="prop2" value="value2" />
+    </type>
+  </product>
+  <product id="821873936">
+    <property id="0" name="" value="" />
+  </product>
+  <product id="-619750972">
+    <type id="2009159525" name="Тип1"></type>
+  </product>
+  <product id="-213456473" />
+  <product id="-2121060792">
+    <property name="Свойство" value="значение" id="-2063883702" />
+    <type id="1371330278" name="Тип1"></type>
+    <type id="1734058467" name="Тип2">
+      <property id="-2063883702" name="Свойство" value="значение1" />
+    </type>
+  </product>
+  <product id="1351967976" />
+  <product id="-577983818" />
+  <product id="-1737052978" />
+</products>

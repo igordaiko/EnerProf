@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace EnerProf.Models
 {
-    public class Company
+    public class Company: IModel
     {
         public string Name { get; set; }
         public string Img { get; set; }

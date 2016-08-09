@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewBag.Title = "Contacts";
+    Layout = "~/Views/Home/_HomeLayout.cshtml";
+}
+
+<div class="page-head">
+    <div class="container">
+        <h3>Контакты</h3>
+    </div>
+</div>
+<!-- //banner -->
+<!-- contact -->
+<div class="contact">
+    <div class="container">
+        <div class="contact-grids">
+            <div class="col-md-4 contact-grid text-center animated wow slideInLeft" data-wow-delay=".5s">
+                <div class="contact-grid1">
+                    <i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>
+                    <h4>Адрес</h4>
+                    <p>ул. Садовая, дом 18<span>Киев.</span></p>
+                </div>
+            </div>
+            <div class="col-md-4 contact-grid text-center animated wow slideInUp" data-wow-delay=".5s">
+                <div class="contact-grid2">
+                    <i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>
+                    <h4>Позвони нам</h4>
+                    <p>044 423-23-23<span>044 423-23-25</span></p>
+                </div>
+            </div>
+            <div class="col-md-4 contact-grid text-center animated wow slideInRight" data-wow-delay=".5s">
+                <div class="contact-grid3">
+                    <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
+                    <h4>Email</h4>
+                    <p><a href="mailto:info@example.com">info@example1.com</a><span><a href="mailto:info@example.com">info@example2.com</a></span></p>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="map wow fadeInDown animated" data-wow-delay=".5s">
+            <h3 class="tittle">Наше расположение</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10162.267759014096!2d30.4693578!3d50.4491666!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce9b49bc214f%3A0x6649e4547d1bd182!2z0YHRgtCw0L3RhtGW0Y8gItCf0L7Qu9GW0YLQtdGF0L3RltGH0L3QsCI!5e0!3m2!1suk!2sua!4v1466365391897" frameborder="0" style="border:0"></iframe>
+
+        </div>
+        <h3 class="tittle">Возник вопрос?</h3>
+        <form>
+            <div class="contact-form2">
+                <input type="text" value="Имя" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Имя';}" required="">
+                <input type="email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
+                <textarea type="text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Сообщение...';}" required="">Сообщение...</textarea>
+                <input type="submit" value="Отправить">
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- //contact -->
+<!-- //product-nav -->
+<div class="coupons">
+    <div class="container">
+        <div class="coupons-grids text-center">
+            <div class="col-md-3 coupons-gd">
+                <h3>Найти решение для задачи - легко</h3>
+            </div>
+            <div class="col-md-3 coupons-gd">
+                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                <h4>Выберите товар</h4>
+                <p>У нас большой ассортимент грузоподъемного и гидравлического оборудования.</p>
+            </div>
+            <div class="col-md-3 coupons-gd">
+                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                <h4>Свяжитесь с нами</h4>
+                <p>Наши профессионалы ответят на любой вопрос.</p>
+            </div>
+            <div class="col-md-3 coupons-gd">
+                <span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span>
+                <h4>Оплатите</h4>
+                <p>Забрать товар можно самовывозом или доставкой.</p>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>

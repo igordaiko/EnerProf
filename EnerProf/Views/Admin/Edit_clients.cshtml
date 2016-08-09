@@ -1,0 +1,70 @@
+﻿@model EnerProf.Models.Clients
+@using EnerProf.Models;
+@using EnerProf.Models.AdminModels;
+@using System.Collections.Generic;
+
+
+@{
+    Layout = null;
+    List<ImagesModel> images = ViewBag.Images;
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit_clients</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        
+        <div class="form-horizontal">
+            <h4>Clients</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.ID)
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.Img, htmlAttributes: new { @class = "control-label col-md-2" })
+                <!--Рома, сделай так что бы можно было выбирать картинку. Адресс на картинку прописываешь вот так: item.Address -->
+                <select name="img">
+                    <option value="0">Без рисунка</option>
+                    @foreach (var item in images)
+                    {
+                        <option id="img_@item.ID"value="@item.ID">@item.Address</option>
+                    }
+                </select>
+            </div>
+    
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+    
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+    <script type="text/javascript" src="/js/jquery-2.2.1.min.js"></script>
+    <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/js.js"></script>
+    <script src="http://code.jquery.com/jquery-1.7.1.js"></script>
+    <script>
+        $("#img_@Model.Img").attr("selected", "selected");
+    </script>
+</body>
+</html>

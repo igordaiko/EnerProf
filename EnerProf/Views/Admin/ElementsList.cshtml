@@ -1,0 +1,30 @@
+﻿@model IEnumerable<EnerProf.Models.AdminModels.ListOfElements>
+@{ 
+    string tablename = ViewBag.Title;
+}
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>Название</th>
+        <th>Картинка</th>
+        <th>Действия</th>
+
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>@Html.ActionLink(item.Name, "Edit_" + tablename, new { id = item.ID } )</td>
+        <td><img src="@item.Img"/></td>
+        <td>
+            @using (Html.BeginForm("Delete", "Admin"))
+            {
+                @Html.Hidden("id", item.ID)
+                <input type="submit" value="Удалить" />
+            }
+        </td>
+    </tr>
+}
+
+</table>

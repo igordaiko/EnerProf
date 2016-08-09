@@ -99,6 +99,7 @@
     <Content Include=".idea\modules.xml" />
     <Content Include=".idea\vcs.xml" />
     <Content Include=".idea\workspace.xml" />
+    <Content Include="App_Data\Products_types.xml" />
     <Content Include="bin\EntityFramework.dll" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
@@ -117,18 +118,48 @@
     <Content Include="bootstrap\js\bootstrap.js" />
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="bootstrap\js\npm.js" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\flexslider.css" />
     <Content Include="css\font.css" />
+    <Content Include="css\jquery-ui.css" />
     <Content Include="css\main.css" />
+    <Content Include="css\pignose.layerslider.css" />
+    <Content Include="css\style.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\Lato\Lato-Black.ttf" />
+    <Content Include="fonts\Lato\Lato-BlackItalic.ttf" />
+    <Content Include="fonts\Lato\Lato-Bold.ttf" />
+    <Content Include="fonts\Lato\Lato-BoldItalic.ttf" />
+    <Content Include="fonts\Lato\Lato-Hairline.ttf" />
+    <Content Include="fonts\Lato\Lato-HairlineItalic.ttf" />
+    <Content Include="fonts\Lato\Lato-Heavy.ttf" />
+    <Content Include="fonts\Lato\Lato-HeavyItalic.ttf" />
+    <Content Include="fonts\Lato\Lato-Italic.ttf" />
+    <Content Include="fonts\Lato\Lato-Light.ttf" />
+    <Content Include="fonts\Lato\Lato-LightItalic.ttf" />
+    <Content Include="fonts\Lato\Lato-Medium.ttf" />
+    <Content Include="fonts\Lato\Lato-MediumItalic.ttf" />
+    <Content Include="fonts\Lato\Lato-Regular.ttf" />
+    <Content Include="fonts\Lato\Lato-Semibold.ttf" />
+    <Content Include="fonts\Lato\Lato-SemiboldItalic.ttf" />
+    <Content Include="fonts\Lato\Lato-Thin.ttf" />
+    <Content Include="fonts\Lato\Lato-ThinItalic.ttf" />
     <Content Include="fonts\Lato\OFL.txt" />
     <Content Include="fonts\Lato\README.txt" />
+    <Content Include="fonts\Шрифт - Hamurz\hamurz\Hamurz Free Version.otf" />
+    <Content Include="fonts\Шрифт - Hamurz\hamurz\Hamurz Free Version.ttf" />
     <Content Include="fonts\Шрифт - Hamurz\hamurz\Preview_1.jpg" />
     <Content Include="fonts\Шрифт - Hamurz\hamurz\Preview_2.jpg" />
     <Content Include="fonts\Шрифт - Hamurz\hamurz\Preview_3.jpg" />
     <Content Include="fonts\Шрифт - Hamurz\hamurz\Preview_4.jpg" />
     <Content Include="fonts\Шрифт - Hamurz\Внимание!.txt" />
+    <Content Include="fonts\Шрифт - Humblle\Humblle Rought Free\Humblle Rought Caps.otf" />
+    <Content Include="fonts\Шрифт - Humblle\Humblle Rought Free\Humblle Rought Caps.ttf" />
     <Content Include="fonts\Шрифт - Humblle\Humblle Rought Free\Humblle.jpg" />
+    <Content Include="fonts\Шрифт - Humblle\Humblle Rought Free\manual.pdf" />
     <Content Include="fonts\Шрифт - Humblle\Humblle Rought Free\Внимание!.txt" />
     <Content Include="fonts\Шрифт - Manteka\manteka\1.jpg" />
+    <Content Include="fonts\Шрифт - Manteka\manteka\manteka.ttf" />
     <Content Include="fonts\Шрифт - Manteka\manteka\Внимание!.txt" />
     <Content Include="Global.asax" />
     <Content Include="img\1-JHA_356_156_1200x1070w.jpg" />
@@ -209,21 +240,35 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DataBaseClasses\CategoriesReader.cs" />
     <Compile Include="DataBaseClasses\ClientsReader.cs" />
+    <Compile Include="DataBaseClasses\CommentsReader.cs" />
     <Compile Include="DataBaseClasses\Companies.cs" />
     <Compile Include="DataBaseClasses\DataBaseInfo.cs" />
+    <Compile Include="DataBaseClasses\EnerProfDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EnerProfDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataBaseClasses\Finding.cs" />
+    <Compile Include="DataBaseClasses\ImagesReader.cs" />
     <Compile Include="DataBaseClasses\IndustriesReader.cs" />
     <Compile Include="DataBaseClasses\ITable.cs" />
     <Compile Include="DataBaseClasses\ProductsReader.cs" />
+    <Compile Include="DataBaseClasses\QuestionsReader].cs" />
     <Compile Include="DataBaseClasses\TableReader.cs" />
+    <Compile Include="DataBaseClasses\XMLReader.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AdminModels\AdminStartPage.cs" />
+    <Compile Include="Models\AdminModels\ImagesModel.cs" />
+    <Compile Include="Models\AdminModels\ListOfElements.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Clients.cs" />
+    <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Company.cs" />
     <Compile Include="Models\Find_Page.cs" />
     <Compile Include="Models\GenericListOfElements.cs" />
@@ -254,30 +299,6 @@
     <Content Include="bootstrap\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="bootstrap\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="bootstrap\fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="fonts\Lato\Lato-Black.ttf" />
-    <Content Include="fonts\Lato\Lato-BlackItalic.ttf" />
-    <Content Include="fonts\Lato\Lato-Bold.ttf" />
-    <Content Include="fonts\Lato\Lato-BoldItalic.ttf" />
-    <Content Include="fonts\Lato\Lato-Hairline.ttf" />
-    <Content Include="fonts\Lato\Lato-HairlineItalic.ttf" />
-    <Content Include="fonts\Lato\Lato-Heavy.ttf" />
-    <Content Include="fonts\Lato\Lato-HeavyItalic.ttf" />
-    <Content Include="fonts\Lato\Lato-Italic.ttf" />
-    <Content Include="fonts\Lato\Lato-Light.ttf" />
-    <Content Include="fonts\Lato\Lato-LightItalic.ttf" />
-    <Content Include="fonts\Lato\Lato-Medium.ttf" />
-    <Content Include="fonts\Lato\Lato-MediumItalic.ttf" />
-    <Content Include="fonts\Lato\Lato-Regular.ttf" />
-    <Content Include="fonts\Lato\Lato-Semibold.ttf" />
-    <Content Include="fonts\Lato\Lato-SemiboldItalic.ttf" />
-    <Content Include="fonts\Lato\Lato-Thin.ttf" />
-    <Content Include="fonts\Lato\Lato-ThinItalic.ttf" />
-    <Content Include="fonts\Шрифт - Hamurz\hamurz\Hamurz Free Version.otf" />
-    <Content Include="fonts\Шрифт - Hamurz\hamurz\Hamurz Free Version.ttf" />
-    <Content Include="fonts\Шрифт - Humblle\Humblle Rought Free\Humblle Rought Caps.otf" />
-    <Content Include="fonts\Шрифт - Humblle\Humblle Rought Free\Humblle Rought Caps.ttf" />
-    <Content Include="fonts\Шрифт - Humblle\Humblle Rought Free\manual.pdf" />
-    <Content Include="fonts\Шрифт - Manteka\manteka\manteka.ttf" />
     <Content Include="js\bootstrap\css\bootstrap-theme.css.map" />
     <Content Include="js\bootstrap\css\bootstrap-theme.min.css.map" />
     <Content Include="js\bootstrap\css\bootstrap.css.map" />
@@ -290,7 +311,29 @@
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\_HomeLayout.cshtml" />
-    <Content Include="Views\Home\Industries_For_Index.cshtml" />
+    <Content Include="DataBaseClasses\EnerProfDataSet.xsc">
+      <DependentUpon>EnerProfDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="DataBaseClasses\EnerProfDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EnerProfDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DataBaseClasses\EnerProfDataSet.xss">
+      <DependentUpon>EnerProfDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\ElementsList.cshtml" />
+    <Content Include="Views\Admin\Edit_Categories.cshtml" />
+    <Content Include="Views\Admin\Edit.cshtml" />
+    <Content Include="Views\Admin\Edit_clients.cshtml" />
+    <Content Include="Views\Admin\Edit_images.cshtml" />
+    <Content Include="Views\Home\Contacts.cshtml" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Views\Home\Product.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -298,9 +341,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

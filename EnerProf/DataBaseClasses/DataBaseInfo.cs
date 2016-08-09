@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Data;
+using System.Data.SqlClient;
+using System.Data.Sql;
+using System.Data.SqlTypes;
 namespace EnerProf.DataBaseClasses
 {
     static public class DataBaseInfo
@@ -12,7 +15,7 @@ namespace EnerProf.DataBaseClasses
         {
             get
             {
-                return "Data Source=IGORDAIKO-PC;Initial Catalog=EnerProf;Integrated Security=True";
+                return "Data Source=SQL5026.Smarterasp.net;Initial Catalog=DB_9F29FB_enerProf;User Id=DB_9F29FB_enerProf_admin;Password=i1g6o0r4";
             }
         }
         private static string CommentsXmlFileConnectionString
@@ -30,5 +33,6 @@ namespace EnerProf.DataBaseClasses
         {
             return CommentsXmlFileConnectionString;
         }
+
     }
 }

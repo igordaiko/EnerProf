@@ -1,0 +1,18 @@
+﻿@model EnerProf.Models.AdminModels.AdminStartPage
+@using System.Data;
+<div>
+    @if (TempData["message"] != null)
+    {
+        <div class="alert alert-success">@TempData["message"]</div>
+    }
+</div>
+
+<div class="tables">
+    <ul>
+        @foreach (DataTable item in Model.Tables)
+        {
+            <li>@Html.ActionLink(item.TableName, "Index", new { tablename = item.TableName })</li>
+        }
+    </ul>
+</div>
+@Html.Partial("ElementsList", Model.List_Of_Elements)

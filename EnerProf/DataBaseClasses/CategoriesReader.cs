@@ -26,7 +26,7 @@ namespace EnerProf.DataBaseClasses
             connection = new SqlConnection(con);
             adapter = new SqlDataAdapter(query, connection);
             Adapter = adapter;
-            queryUpdate = "Update Categories set [name] = @p2, [img] = @p3, [parentID] = @p4, [companyID] = @p5" +
+            queryUpdate = "Update Categories set [name] = @p2, [img] = @p3, [parentID] = @p4" +
                 " where [id] = @p1";
         }
         public SqlDataAdapter Adapter { get; set; }

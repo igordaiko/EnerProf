@@ -5,6 +5,7 @@ using System.Web;
 using System.Data;
 using System.Reflection;
 using EnerProf.DataBaseClasses;
+using EnerProf.Models.AdminModels;
 namespace EnerProf.Models
 {
     /// <summary>
@@ -16,7 +17,6 @@ namespace EnerProf.Models
         ITable itable;
         TableReader reader;
         DataTable table;
-
         public GenericListOfElements(ITable itable)
         {
             this.itable = itable;
@@ -24,6 +24,7 @@ namespace EnerProf.Models
             table = reader.SelectRows();
             ListOfItems = ReturnList();
         }
+
         //Конструктор предназначен для выбора элементов соответсвующих критериям поиска
         public GenericListOfElements(ITable itable, string find, string row_name)
         {
@@ -33,8 +34,26 @@ namespace EnerProf.Models
             ListOfItems = ReturnList();
 
         }
+        //Конструктор предназначен для выбора по определенным колонкам
+        public GenericListOfElements(ITable itable, string[] columns_)
+        {
+            this.itable = itable;
+            reader = new TableReader(this.itable);
+            table = reader.SelectRows(columns_);
+            ListOfItems = ReturnList();
+        }
+        //Конструктор предназначен для заполнения модели одного элемента
+        public GenericListOfElements(ITable itable, string id)
+        {
+            this.itable = itable;
+            reader = new TableReader(this.itable);
+            table = reader.SelectRows(id, "id");
+            Model = ReturnModel();
+        }
+
         //Коллекция типа Модели
         public List<T> ListOfItems { get; set; }
+        public T Model { get; set; }
 
         private List<T> ReturnList()
         {
@@ -57,6 +76,22 @@ namespace EnerProf.Models
                 list.Add(model);
             }
             return list;   
+        }
+        private T ReturnModel()
+        {
+            T model;
+            Type type;
+            model = (T)Activator.CreateInstance(typeof(T));
+            type = typeof(T);
+            DataRow row = table.Rows[0];
+            //Получение набора свойств
+            PropertyInfo[] props = type.GetProperties();
+            for (int i = 0; i < table.Columns.Count; i++)
+            {
+                //Устанавливаю значение свойства за индексом
+                props[i].SetValue(model, row[i]);
+            }
+            return model;
         }
     }
 }

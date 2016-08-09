@@ -77,6 +77,23 @@ namespace EnerProf.DataBaseClasses
             }
             return table;
         }
+        public DataTable SelectRows(string[] columns)
+        {
+            DataTable table = set.Tables[0].Clone();
+            foreach (DataRow row in set.Tables[0].Rows)
+                table.ImportRow(row);
+
+            for (int i = 0; i < table.Columns.Count; i++)
+            {
+                if (!columns.Contains(table.Columns[i].ColumnName))
+                {
+                    table.Columns.Remove(table.Columns[i].ColumnName);
+                    i--;
+                }
+            }
+
+            return table;
+        }
         public void AddRow(object[] colls)
         {
             DataTable table = SelectRows();
