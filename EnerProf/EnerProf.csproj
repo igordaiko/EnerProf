@@ -266,6 +266,7 @@
     <Compile Include="Models\AdminModels\AdminStartPage.cs" />
     <Compile Include="Models\AdminModels\ImagesModel.cs" />
     <Compile Include="Models\AdminModels\ListOfElements.cs" />
+    <Compile Include="Models\Categories_Page.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Clients.cs" />
     <Compile Include="Models\Comment.cs" />
@@ -334,6 +335,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Views\Home\Product.cshtml" />
+    <Content Include="Views\Home\categories.cshtml" />
+    <Content Include="Views\Home\products.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

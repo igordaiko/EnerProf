@@ -1,4 +1,3 @@
-
 html, body{
 	margin:0;
 	font-size: 100%;
@@ -648,7 +647,7 @@ ul.social-slide li i.mac{
     height: 5px;
     width: 35px;
   display:inline-block;
-  background: #ffffff;
+  background: #ff6008;
   border-radius: 30px;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
@@ -656,7 +655,7 @@ ul.social-slide li i.mac{
   -ms-border-radius: 30px;
 }
 .callbacks_here a:after{
-	background: #FDA30E;	
+	background: #3b3a3a;	
 }
 a.callbacks_nav.callbacks2_nav.prev {
 background: transparent url("../images/2.png") no-repeat left top;
@@ -1661,7 +1660,7 @@ ul.multi-column-dropdown li a:hover{
 }
 /*-- coupons --*/
 .coupons{
-background:url(/images/coupons.jpg) no-repeat center;
+background:url(../images/coupons.jpg) no-repeat center;
 background-size:cover;
 -webkit-background-size: cover;
 -o-background-size: cover;
@@ -2049,6 +2048,12 @@ ol {
     width:48%;
     margin-bottom: 30px;
 }
+.width-electro-3{
+    width: 31%;
+    float: left;
+    margin-bottom: 25px;
+    margin-left: 25px;
+}
 .electro-img-btm-right{
     float:right;
     width:48%;
@@ -2142,7 +2147,7 @@ border-bottom: 1px solid #e5e3db;
 }
 
 .css-treeview a{
-    background: url("../images/icons1.png") no-repeat 0px 9px !important;
+    /*background: url("../images/icons1.png") no-repeat 0px 9px !important;*/
     padding: 7px 0 0 31px;
     border-radius: 3px;
     margin: 2px;
@@ -2209,7 +2214,7 @@ border-bottom: 1px solid #e5e3db;
 .css-treeview label,
 .css-treeview label::before
 {
-	background:url("../images/icons1.png") no-repeat 0px 7px !important;
+	/*background:url("../images/icons1.png") no-repeat 0px 7px !important;*/
 }
 .css-treeview label,
 .css-treeview a,
@@ -2232,11 +2237,12 @@ border-bottom: 1px solid #e5e3db;
 	vertical-align: middle;
 	background-position: 0 -32px;
 }
-
 .css-treeview input:checked + label::before
 {
-	background-position: 0 -16px;
+	background-position: 0 -30px;
+    background: url("../images/icons2.png");
 }
+
 
 /* webkit adjacent element selector bugfix */
 @media screen and (-webkit-min-device-pixel-ratio:0)
@@ -2263,7 +2269,7 @@ border-bottom: 1px solid #e5e3db;
     border: 1px solid #d2d2d2;
 }
 .css-treeview h4 {
-    color: #FDA30E;
+    color: #ff6008;
     text-align: center;
     background: #f7f7f7;
     padding: 17px 0;
@@ -2272,7 +2278,7 @@ border-bottom: 1px solid #e5e3db;
     border-bottom: 1px solid #d2d2d2;
 }
 .tree-list-pad{
-	padding:30px 30px;
+	padding:18px 30px;
 }
 .community-poll {
     border: 1px solid #d2d2d2;
@@ -2284,11 +2290,11 @@ border-bottom: 1px solid #e5e3db;
 	margin-left:15px;
 }
 .radio:first-child {
-	margin-left: 0;
-	margin: 0;
+	/*margin-left: 0;*/
+	margin: 0 0 0 26px;
 }
 .radio {
-	padding-left:22px;
+	padding-left:0px;
 	line-height: 28px;
 	color: #404040;
 	cursor: pointer;
@@ -2372,7 +2378,7 @@ label.checkbox {
     padding: 30px 30px;
 }
 .check_box {
-    margin-bottom: 5px;
+    margin: 12px 0;
 }
 .community-poll h4 {
     color: #FDA30E;
@@ -2415,12 +2421,23 @@ background:#FDA30E;
 .men-wear-bottom {
     margin: 50px 0;
 }
-.men-wear-right h4 {
-    color: #FDA30E;
-    font-size: 27px;
-    margin: 0px 0 24px;
+.img-info-left{
+    margin: 17% 0 0 0;
 }
-.men-wear-right p {
+.img-info-right{
+    margin: 17% 0 0 17%;
+}
+.tools-right h4 {
+    color: #ff6008;
+    font-size: 27px;
+    margin: 40px 0 24px;
+}
+.tools-right h2 {
+    color: #ff6008;
+    font-size: 20px;
+    margin: 40px 0 24px;
+}
+.tools-right p {
     font-size: 15px;
     color: #999;
     line-height: 2.2em;
@@ -2432,7 +2449,7 @@ background:#FDA30E;
     padding: 0 25px 0 0 !important;
 }
 .products-right h5 {
-    color: #FDA30E;
+    color: #ff6008;
     font-size: 25px;
     text-transform: uppercase;
 }
@@ -3013,7 +3030,7 @@ td.invert-image a img {
 	.sign-grds {
 		margin-top: 40px;
 	}
-	.men-wear-right p {
+	.tools-right p {
 		font-size: 14px;
 	}
 	.css-treeview label {
@@ -3032,7 +3049,7 @@ td.invert-image a img {
 	.sort-grid {
 		padding: 25px 0;
 	}
-	.men-wear-right h4 {
+	.tools-right h4 {
 		font-size: 23px;
 	}
 	.tree-list-pad {
@@ -3634,7 +3651,7 @@ td.invert-image a img {
 		float: left;
 		width: 26%;
 	}
-	.men-wear-right {
+	.tools-right {
 		float: left;
 		width: 74%;
 	}
@@ -3855,13 +3872,13 @@ td.invert-image a img {
 	.login-right {
 		margin-top: 30px;
 	}
-	.men-wear-right p {
+	.tools-right p {
 		line-height: 2em;
 	}
-	.men-wear-right p {
+	.tools-right p {
 		font-size: 13px;
 	}
-	.men-wear-right h4 {
+	.tools-right h4 {
 		font-size: 20px;
 		margin: 0px 0 21px;
 	}
@@ -4045,12 +4062,12 @@ td.invert-image a img {
 		float: left;
 		width: 32%;
 	}
-	.men-wear-right {
+	.tools-right {
 		float: left;
 		width: 68%;
 		padding: 0;
 	}
-	.men-wear-right h4 {
+	.tools-right h4 {
 		margin: 0px 0 10px;
 	}
 	.product-men {
@@ -4421,7 +4438,7 @@ td.invert-image a img {
 		width: 46%;
 		margin: 0 auto;
 	}
-	.men-wear-right {
+	.tools-right {
 		float: none;
 		width: 100%;
 		padding: 0;
@@ -4993,7 +5010,7 @@ td.invert-image a img {
 	.men-wear-bottom {
 		margin: 32px 0 0px;
 	}
-	.men-wear-right h4 {
+	.tools-right h4 {
 		font-size: 16px;
 	}
 	.men-wear-left {

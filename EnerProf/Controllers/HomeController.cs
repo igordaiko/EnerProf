@@ -53,6 +53,39 @@ namespace EnerProf.Controllers
             return Contacts();
         }
 
+        public ActionResult categories(int? parent_id)
+        {
+            ITable itable = new CategoriesReader();
+            GenericListOfElements<Category> cats_gen = new GenericListOfElements<Category>(itable);
+            Categories_Page model = new Categories_Page();
+            List<Category> categories = cats_gen.ListOfItems;
+            if (parent_id != null)
+            {
+                model.Description = categories.Where(cat => cat.ID == parent_id).Select(desc => desc.Description).ToList()[0];
+                ViewBag.CatName = categories.Where(cat => cat.ID == parent_id).Select(name => name.Name).ToList()[0];
+                categories = categories.Where(parent => parent.ParentID == parent_id).ToList();
+            }
+            else
+            { 
+                categories = categories.Where(parent => parent.ParentID == 0).ToList();
+                ViewBag.CatName = "Оборудование";
+            }
+            model.Categories = categories;
+
+            if (categories.Count == 0)
+                return products((int)parent_id);
+
+            return View(model);
+        }
+
+        public ActionResult products(int cat_id)
+        {
+            ITable itable = new ProductsReader();
+            GenericListOfElements<Product> products_gen = new GenericListOfElements<Models.Product>(itable, cat_id.ToString(), "catID");
+            List<Product> model = products_gen.ListOfItems;
+            return View(model);
+        }
+
         public ActionResult Product(int id)
         {
             ITable itable = new ProductsReader();
@@ -60,14 +93,6 @@ namespace EnerProf.Controllers
             GenericListOfElements<Product> gen_prod = new GenericListOfElements<Models.Product>(itable, id.ToString());
             Product model = gen_prod.Model;
             XMLReader xml_reader = new XMLReader(id);
-            itable = new ImagesReader();
-            reader = new TableReader(itable);
-            string[] imgs = model.Images.Split(';');
-            model.Images = "";
-            foreach(string img_id in imgs)
-            {
-                model.Images += reader.FindElementById(int.Parse(img_id))["address"] + ";";
-            }
             model.Images.Remove(model.Images.Length - 1, 1);
             itable = new CommentsReader();
             GenericListOfElements<Comment> gen_comments = new GenericListOfElements<Comment>(itable);

@@ -113,13 +113,13 @@
                                     <ul class="dropdown-menu multi-column columns-3">
                                         <div class="row">
                                             <div class="col-sm-6 multi-gd-img1 multi-gd-text ">
-                                                <a href="services.html"><img src="~/images/woo2.png" alt=" " /></a>
+                                                <a href="/Home/categories"><img src="~/images/woo2.png" alt=" " /></a>
                                             </div>
                                             <div class="col-sm-3 multi-gd-img">
                                                 <ul class="multi-column-dropdown">
                                                     @foreach (Category cat in model_categories)
                                                     {
-                                                        <li><a href="tools.html">@cat.Name</a></li>
+                                                        <li><a href="/Home/categories?parent_id=@cat.ID">@cat.Name</a></li>
                                                     }
                                                 </ul>
                                             </div>

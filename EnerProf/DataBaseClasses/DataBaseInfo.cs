@@ -15,7 +15,7 @@ namespace EnerProf.DataBaseClasses
         {
             get
             {
-                return "Data Source=SQL5026.Smarterasp.net;Initial Catalog=DB_9F29FB_enerProf;User Id=DB_9F29FB_enerProf_admin;Password=i1g6o0r4";
+                return "Data Source=IGORDAIKO-PC;Initial Catalog=EnerProf;Integrated Security=True";
             }
         }
         private static string CommentsXmlFileConnectionString

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
 
 namespace EnerProf.Models
 {
@@ -18,6 +19,8 @@ namespace EnerProf.Models
         [Display(Name = "Родительская категория")]
         public int ParentID { get; set; }
         public int CompanyId { get; set; }
+        [UIHint("tinymce_jquery_full"), AllowHtml]
+        public string Description { get; set; }
         public List<Category> Sub { get; set; }
         public List<Product> Products { get; set; }
         public PagesInfo PagingInfo { get; set; }
